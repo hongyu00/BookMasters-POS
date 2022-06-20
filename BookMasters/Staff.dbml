@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BookMastersDB" Class="StaffDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\BookMastersDB.mdf;Integrated Security=True" SettingsObjectName="BookMasters.My.MySettings" SettingsPropertyName="BookMastersDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Staff" Member="Staffs">
+    <Type Name="Staff">
+      <Column Name="staffID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="staffName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="staffRole" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="staffType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="staffPassword" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="staffIC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="staffContact" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="staffStatus" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="joinedDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="staffSalary" Type="System.Decimal" DbType="Decimal(7,2) NOT NULL" CanBeNull="false" />
+      <Column Name="staffAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="staffBirthDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="staffGender" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="staffAddress" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="staffEmail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="leaveDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="staffLeaveReason" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

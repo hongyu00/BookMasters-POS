@@ -1,0 +1,783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4BF14C28-D2DD-4C7C-9A5A-A2751191B795}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>BookMasters.My.MyApplication</StartupObject>
+    <RootNamespace>BookMasters</RootNamespace>
+    <AssemblyName>BookMasters</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>BookMasters.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>BookMasters.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bookhouseIcon_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Common.vb" />
+    <Compile Include="Discount Module\AddNewDiscount.designer.vb">
+      <DependentUpon>AddNewDiscount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Discount Module\AddNewDiscount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Discount Module\EditDiscountInfo.designer.vb">
+      <DependentUpon>EditDiscountInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Discount Module\EditDiscountInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Discount Module\GenerateDiscountReport.designer.vb">
+      <DependentUpon>GenerateDiscountReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Discount Module\GenerateDiscountReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Discount Module\ViewAllDiscount.designer.vb">
+      <DependentUpon>ViewAllDiscount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Discount Module\ViewAllDiscount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Discount Module\ViewSelectedDiscountDetails.designer.vb">
+      <DependentUpon>ViewSelectedDiscountDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Discount Module\ViewSelectedDiscountDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAboutBox.Designer.vb">
+      <DependentUpon>FrmAboutBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAboutBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHome.designer.vb">
+      <DependentUpon>FrmHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMainMenu.designer.vb">
+      <DependentUpon>FrmMainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSplash.Designer.vb">
+      <DependentUpon>FrmSplash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSplash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product Module\PriceCheckResult.designer.vb">
+      <DependentUpon>PriceCheckResult.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Product Module\PriceCheckResult.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product Module\ProductPriceCheck.designer.vb">
+      <DependentUpon>ProductPriceCheck.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Product Module\ProductPriceCheck.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff Module\AddNewStaff.designer.vb">
+      <DependentUpon>AddNewStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Staff Module\AddNewStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff Module\ManagerMain.designer.vb">
+      <DependentUpon>ManagerMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Staff Module\ManagerMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff Module\ManagerViewStaffInformation.designer.vb">
+      <DependentUpon>ManagerViewStaffInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Staff Module\ManagerViewStaffInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff Module\MonthlyStaffJoinedReport.Designer.vb">
+      <DependentUpon>MonthlyStaffJoinedReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Staff Module\MonthlyStaffJoinedReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff Module\StaffViewInformation.designer.vb">
+      <DependentUpon>StaffViewInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Staff Module\StaffViewInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff Module\UpdateStaffInformation.designer.vb">
+      <DependentUpon>UpdateStaffInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Staff Module\UpdateStaffInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member Module\ActivityDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ActivityDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Member Module\ActivityDataSet.vb">
+      <DependentUpon>ActivityDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberRedeemPoint.Designer.vb">
+      <DependentUpon>FrmMemberRedeemPoint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberRedeemPoint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberRenew.Designer.vb">
+      <DependentUpon>FrmMemberRenew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberRenew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberReport.Designer.vb">
+      <DependentUpon>FrmMemberReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberAdd.designer.vb">
+      <DependentUpon>FrmMemberAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberDetailsNUpdate.Designer.vb">
+      <DependentUpon>FrmMemberDetailsNUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberDetailsNUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberAll.Designer.vb">
+      <DependentUpon>FrmMemberAll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberAll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberReportSelection.Designer.vb">
+      <DependentUpon>FrmMemberReportSelection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberReportSelection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberSearch.Designer.vb">
+      <DependentUpon>FrmMemberSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberValidation.Designer.vb">
+      <DependentUpon>FrmMemberValidation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberValidation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberShowReport.Designer.vb">
+      <DependentUpon>FrmMemberShowReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Member Module\FrmMemberShowReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product Module\AddNewProduct.designer.vb">
+      <DependentUpon>AddNewProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Product Module\AddNewProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product Module\AddProductStock.designer.vb">
+      <DependentUpon>AddProductStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Product Module\AddProductStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product Module\EditProductInfo.designer.vb">
+      <DependentUpon>EditProductInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Product Module\EditProductInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product Module\GenerateProductReport.designer.vb">
+      <DependentUpon>GenerateProductReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Product Module\GenerateProductReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product Module\ViewAllProduct.designer.vb">
+      <DependentUpon>ViewAllProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Product Module\ViewAllProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product Module\ViewSelectedProductDetails.designer.vb">
+      <DependentUpon>ViewSelectedProductDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Product Module\ViewSelectedProductDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormCard.designer.vb">
+      <DependentUpon>FormCard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormCard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormCardDetails.designer.vb">
+      <DependentUpon>FormCardDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormCardDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormCardLoadingScreen.designer.vb">
+      <DependentUpon>FormCardLoadingScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormCardLoadingScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormCash.designer.vb">
+      <DependentUpon>FormCash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormCash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormCloseCounter.designer.vb">
+      <DependentUpon>FormCloseCounter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormCloseCounter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormEditQuantity.designer.vb">
+      <DependentUpon>FormEditQuantity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormEditQuantity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormOpenCounter.designer.vb">
+      <DependentUpon>FormOpenCounter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormOpenCounter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormPayment.designer.vb">
+      <DependentUpon>FormPayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormPayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormPaymentHistory.designer.vb">
+      <DependentUpon>FormPaymentHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormPaymentHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormPaymentReport.designer.vb">
+      <DependentUpon>FormPaymentReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\FormPaymentReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales Order And Payment Module\HoldPreviousPaymentClass.vb" />
+    <Compile Include="Sales Order And Payment Module\PaymentCommon.vb" />
+    <Compile Include="Sales Order And Payment Module\ProductClass.vb" />
+    <Compile Include="Staff.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Staff.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="User Login Module\ChangePassword.designer.vb">
+      <DependentUpon>ChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Login Module\ChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Login Module\ForgotPassword.designer.vb">
+      <DependentUpon>ForgotPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Login Module\ForgotPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Login Module\ForgotPassword_ResetPassword.designer.vb">
+      <DependentUpon>ForgotPassword_ResetPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Login Module\ForgotPassword_ResetPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Login Module\MonthlyUserLoginReport.Designer.vb">
+      <DependentUpon>MonthlyUserLoginReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Login Module\MonthlyUserLoginReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Login Module\UserLogin.designer.vb">
+      <DependentUpon>UserLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Login Module\UserLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLogTime.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserLogTime.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Voucher Module\FrmVoucherAll.Designer.vb">
+      <DependentUpon>FrmVoucherAll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Voucher Module\FrmVoucherAll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Voucher Module\FrmVoucherAvailableShowReport.designer.vb">
+      <DependentUpon>FrmVoucherAvailableShowReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Voucher Module\FrmVoucherAvailableShowReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Voucher Module\FrmVoucherDetailsNUpdate.Designer.vb">
+      <DependentUpon>FrmVoucherDetailsNUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Voucher Module\FrmVoucherDetailsNUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Voucher Module\FrmVoucherAdd.Designer.vb">
+      <DependentUpon>FrmVoucherAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Voucher Module\FrmVoucherAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Voucher Module\FrmVoucherReport.designer.vb">
+      <DependentUpon>FrmVoucherReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Voucher Module\FrmVoucherReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Voucher Module\FrmVoucherSearch.Designer.vb">
+      <DependentUpon>FrmVoucherSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Voucher Module\FrmVoucherSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Voucher Module\FrmVoucherUsedShowReport.designer.vb">
+      <DependentUpon>FrmVoucherUsedShowReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Voucher Module\FrmVoucherUsedShowReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Voucher Module\FrmVoucherValidation.Designer.vb">
+      <DependentUpon>FrmVoucherValidation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Voucher Module\FrmVoucherValidation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Voucher Module\VoucherReportDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VoucherReportDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Discount Module\AddNewDiscount.resx">
+      <DependentUpon>AddNewDiscount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Discount Module\EditDiscountInfo.resx">
+      <DependentUpon>EditDiscountInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Discount Module\GenerateDiscountReport.resx">
+      <DependentUpon>GenerateDiscountReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Discount Module\ViewAllDiscount.resx">
+      <DependentUpon>ViewAllDiscount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Discount Module\ViewSelectedDiscountDetails.resx">
+      <DependentUpon>ViewSelectedDiscountDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAboutBox.resx">
+      <DependentUpon>FrmAboutBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHome.resx">
+      <DependentUpon>FrmHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMainMenu.resx">
+      <DependentUpon>FrmMainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSplash.resx">
+      <DependentUpon>FrmSplash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member Module\ActivityReport.rdlc" />
+    <EmbeddedResource Include="Member Module\FrmMemberRedeemPoint.resx">
+      <DependentUpon>FrmMemberRedeemPoint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member Module\FrmMemberRenew.resx">
+      <DependentUpon>FrmMemberRenew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member Module\FrmMemberReport.resx">
+      <DependentUpon>FrmMemberReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member Module\FrmMemberAdd.resx">
+      <DependentUpon>FrmMemberAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member Module\FrmMemberDetailsNUpdate.resx">
+      <DependentUpon>FrmMemberDetailsNUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member Module\FrmMemberAll.resx">
+      <DependentUpon>FrmMemberAll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member Module\FrmMemberReportSelection.resx">
+      <DependentUpon>FrmMemberReportSelection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member Module\FrmMemberSearch.resx">
+      <DependentUpon>FrmMemberSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member Module\FrmMemberValidation.resx">
+      <DependentUpon>FrmMemberValidation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member Module\FrmMemberShowReport.resx">
+      <DependentUpon>FrmMemberShowReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product Module\AddNewProduct.resx">
+      <DependentUpon>AddNewProduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product Module\AddProductStock.resx">
+      <DependentUpon>AddProductStock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product Module\EditProductInfo.resx">
+      <DependentUpon>EditProductInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product Module\GenerateProductReport.resx">
+      <DependentUpon>GenerateProductReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product Module\PriceCheckResult.resx">
+      <DependentUpon>PriceCheckResult.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product Module\ProductPriceCheck.resx">
+      <DependentUpon>ProductPriceCheck.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product Module\ViewAllProduct.resx">
+      <DependentUpon>ViewAllProduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product Module\ViewSelectedProductDetails.resx">
+      <DependentUpon>ViewSelectedProductDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales Order And Payment Module\FormCard.resx">
+      <DependentUpon>FormCard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales Order And Payment Module\FormCardDetails.resx">
+      <DependentUpon>FormCardDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales Order And Payment Module\FormCardLoadingScreen.resx">
+      <DependentUpon>FormCardLoadingScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales Order And Payment Module\FormCash.resx">
+      <DependentUpon>FormCash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales Order And Payment Module\FormCloseCounter.resx">
+      <DependentUpon>FormCloseCounter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales Order And Payment Module\FormEditQuantity.resx">
+      <DependentUpon>FormEditQuantity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales Order And Payment Module\FormOpenCounter.resx">
+      <DependentUpon>FormOpenCounter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales Order And Payment Module\FormPayment.resx">
+      <DependentUpon>FormPayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales Order And Payment Module\FormPaymentHistory.resx">
+      <DependentUpon>FormPaymentHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales Order And Payment Module\FormPaymentReport.resx">
+      <DependentUpon>FormPaymentReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff Module\AddNewStaff.resx">
+      <DependentUpon>AddNewStaff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff Module\ManagerMain.resx">
+      <DependentUpon>ManagerMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff Module\ManagerViewStaffInformation.resx">
+      <DependentUpon>ManagerViewStaffInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff Module\MonthlyStaffJoinedReport.aa-DJ.resx">
+      <DependentUpon>MonthlyStaffJoinedReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff Module\MonthlyStaffJoinedReport.aa.resx">
+      <DependentUpon>MonthlyStaffJoinedReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff Module\MonthlyStaffJoinedReport.resx">
+      <DependentUpon>MonthlyStaffJoinedReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff Module\StaffViewInformation.resx">
+      <DependentUpon>StaffViewInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff Module\UpdateStaffInformation.resx">
+      <DependentUpon>UpdateStaffInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Login Module\ChangePassword.resx">
+      <DependentUpon>ChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Login Module\ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Login Module\ForgotPassword_ResetPassword.resx">
+      <DependentUpon>ForgotPassword_ResetPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Login Module\MonthlyUserLoginReport.resx">
+      <DependentUpon>MonthlyUserLoginReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Login Module\UserLogin.resx">
+      <DependentUpon>UserLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voucher Module\FrmVoucherAll.resx">
+      <DependentUpon>FrmVoucherAll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voucher Module\FrmVoucherAvailableShowReport.resx">
+      <DependentUpon>FrmVoucherAvailableShowReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voucher Module\FrmVoucherDetailsNUpdate.resx">
+      <DependentUpon>FrmVoucherDetailsNUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voucher Module\FrmVoucherAdd.resx">
+      <DependentUpon>FrmVoucherAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voucher Module\FrmVoucherReport.resx">
+      <DependentUpon>FrmVoucherReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voucher Module\FrmVoucherSearch.resx">
+      <DependentUpon>FrmVoucherSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voucher Module\FrmVoucherUsedShowReport.resx">
+      <DependentUpon>FrmVoucherUsedShowReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voucher Module\FrmVoucherValidation.resx">
+      <DependentUpon>FrmVoucherValidation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voucher Module\VoucherAvailableReport.rdlc" />
+    <EmbeddedResource Include="Voucher Module\VoucherUsedReport.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Member Module\ActivityDataSet.xsc">
+      <DependentUpon>ActivityDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Member Module\ActivityDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ActivityDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Member Module\ActivityDataSet.xss">
+      <DependentUpon>ActivityDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="Staff.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Staff.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Staff.dbml.layout">
+      <DependentUpon>Staff.dbml</DependentUpon>
+    </None>
+    <None Include="UserLogTime.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>UserLogTime.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserLogTime.dbml.layout">
+      <DependentUpon>UserLogTime.dbml</DependentUpon>
+    </None>
+    <None Include="Voucher Module\VoucherReportDataSet.xsc">
+      <DependentUpon>VoucherReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Voucher Module\VoucherReportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VoucherReportDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Voucher Module\VoucherReportDataSet.xss">
+      <DependentUpon>VoucherReportDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\SplashBookStoreTransparent.png" />
+    <None Include="Resources\PasswordIcon.png" />
+    <None Include="Resources\Login.png" />
+    <None Include="Resources\Default Profile.png" />
+    <None Include="Resources\BookMasterLogo.png" />
+    <None Include="Resources\greenUpArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bookhouseIcon_icon.ico" />
+    <Content Include="BookMastersDB.mdf" />
+    <Content Include="BookMastersDB_log.ldf">
+      <DependentUpon>BookMastersDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\rangeArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

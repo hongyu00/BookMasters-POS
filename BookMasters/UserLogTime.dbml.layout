@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UserLogTime">
+  <DataContextMoniker Name="/UserLogTimeDataContext" />
+  <nestedChildShapes>
+    <classShape Id="fabba37b-8db4-42d1-b10b-0e6aa6e78790" absoluteBounds="1.625, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/UserLogTimeDataContext/UserLogTime" />
+      <nestedChildShapes>
+        <elementListCompartment Id="810d461f-dae6-4123-a8d2-151486d5baa9" absoluteBounds="1.6399999999999997, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

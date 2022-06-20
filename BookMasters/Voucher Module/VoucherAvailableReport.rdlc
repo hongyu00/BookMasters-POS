@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="VoucherReportDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>4bb534ec-00c3-4da3-91f1-fabae5d04ef1</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="myVoucherDataSet">
+      <Query>
+        <DataSourceName>VoucherReportDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="voucherID">
+          <DataField>voucherID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="discountAmount">
+          <DataField>discountAmount</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="voucherStartDate">
+          <DataField>voucherStartDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="voucherExpiredDate">
+          <DataField>voucherExpiredDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="minimumSpend">
+          <DataField>minimumSpend</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="voucherStatus">
+          <DataField>voucherStatus</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="staffID">
+          <DataField>staffID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>VoucherReportDataSet</rd:DataSetName>
+        <rd:SchemaPath>D:\Education\CZY\Degree\Y2S2\BAIT1083 VISUAL PROGRAMMING\Assignment\BookMastersFullUIV1\BookMasters\Voucher Module\VoucherReportDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>VoucherReportDataSetTable</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Tablix1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>2.54783cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.16752cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>3.11932cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>3.05583cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.46248cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.26487cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.83283cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Voucher ID</Value>
+                                  <Style>
+                                    <FontSize>12pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>CornflowerBlue</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox3">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Discount </Value>
+                                  <Style>
+                                    <FontSize>12pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>CornflowerBlue</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox5">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value> Start Date</Value>
+                                  <Style>
+                                    <FontSize>12pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox5</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>CornflowerBlue</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox7">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value> End Date</Value>
+                                  <Style>
+                                    <FontSize>12pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox7</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>CornflowerBlue</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox11">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value> Status</Value>
+                                  <Style>
+                                    <FontSize>12pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox11</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>CornflowerBlue</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Staff ID</Value>
+                                  <Style>
+                                    <FontSize>12pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox2</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>CornflowerBlue</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.727cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="voucherID">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!voucherID.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>voucherID</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="discountAmount">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!discountAmount.Value</Value>
+                                  <Style>
+                                    <Format>'RM'0.00;'RM'0.00-</Format>
+                                    <rd:FormatSymbolCulture>en-MY</rd:FormatSymbolCulture>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>discountAmount</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>en-MY</rd:FormatSymbolCulture>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="voucherStartDate">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Label>startDate</Label>
+                                  <Value>=Fields!voucherStartDate.Value</Value>
+                                  <Style>
+                                    <Format>yyyy-MM-dd</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>voucherStartDate</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="voucherExpiredDate">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Label>endDate</Label>
+                                  <Value>=Fields!voucherExpiredDate.Value</Value>
+                                  <Style>
+                                    <Format>yyyy-MM-dd</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>voucherExpiredDate</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="voucherStatus">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!voucherStatus.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>voucherStatus</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="staffID">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!staffID.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>staffID</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Details" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>myVoucherDataSet</DataSetName>
+            <Top>3.0713cm</Top>
+            <Height>1.55983cm</Height>
+            <Width>15.61785cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Textbox Name="engReport">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>----------End of the Report----------</Value>
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.93711cm</Top>
+            <Left>5.04437cm</Left>
+            <Height>0.7905cm</Height>
+            <Width>5.929cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="memberID2">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Printed on </Value>
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Label>todayDate</Label>
+                    <Value>=Parameters!todayDate.Value</Value>
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                      <Format>dddd, d MMMM, yyyy h:mm:ss tt</Format>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.14328cm</Top>
+            <Left>0.00004cm</Left>
+            <Height>0.7905cm</Height>
+            <Width>16.68683cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="memberID3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Generated by </Value>
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Label>staffName</Label>
+                    <Value>=Parameters!staffName.Value</Value>
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                      <Format>dddd, d MMMM, yyyy h:mm:ss tt</Format>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.93378cm</Top>
+            <Left>0.00005cm</Left>
+            <Height>0.7905cm</Height>
+            <Width>16.68682cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="memberID5">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Label>month</Label>
+                    <Value>=Parameters!month.Value</Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                      <FontFamily>Century Gothic</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                      <FontFamily>Century Gothic</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Label>year</Label>
+                    <Value>=Parameters!year.Value</Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                      <FontFamily>Century Gothic</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Format>dddd, d MMMM, yyyy h:mm:ss tt</Format>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.17639cm</Top>
+            <Left>0.00003cm</Left>
+            <Height>0.7905cm</Height>
+            <Width>16.68684cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <Height>5.72761cm</Height>
+        <Style />
+      </Body>
+      <Width>16.68687cm</Width>
+      <Page>
+        <PageHeader>
+          <Height>5.92183cm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Image Name="BookMasterLogo">
+              <Source>Embedded</Source>
+              <Value>BookMasterLogo</Value>
+              <Sizing>FitProportional</Sizing>
+              <Left>5.04437cm</Left>
+              <Height>3.09878cm</Height>
+              <Width>8.30862cm</Width>
+              <ToolTip>BookMaster</ToolTip>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
+            <Textbox Name="slogan">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>BOOK MASTERS</Value>
+                      <Style>
+                        <FontStyle>Italic</FontStyle>
+                        <FontFamily>Bahnschrift Light</FontFamily>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Ground Floor, Tan Sri Khaw Kai Boh Building, Kampus Utama, Jalan Genting Klebang,</Value>
+                      <Style>
+                        <FontStyle>Italic</FontStyle>
+                        <FontFamily>Bahnschrift Light</FontFamily>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>53300 Kuala Lumpur,Wilayah Persekutuan Kuala Lumpur</Value>
+                      <Style>
+                        <FontStyle>Italic</FontStyle>
+                        <FontFamily>Bahnschrift Light</FontFamily>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Tel: +(603)-4145 0123</Value>
+                      <Style>
+                        <FontStyle>Italic</FontStyle>
+                        <FontFamily>Bahnschrift Light</FontFamily>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>3.16934cm</Top>
+              <Left>0.00002cm</Left>
+              <Height>1.53134cm</Height>
+              <Width>16.68685cm</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="memberID4">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Monthly Voucher Available Report</Value>
+                      <Style>
+                        <FontFamily>Century Gothic</FontFamily>
+                        <FontSize>18pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                        <TextDecoration>Underline</TextDecoration>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>4.77123cm</Top>
+              <Left>0.00003cm</Left>
+              <Height>1.108cm</Height>
+              <Width>16.68684cm</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageHeader>
+        <PageFooter>
+          <Height>5cm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="pageNo2">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Page </Value>
+                      <Style>
+                        <FontStyle>Italic</FontStyle>
+                        <FontFamily>Century Gothic</FontFamily>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Label>pageNumber</Label>
+                      <Value>=Globals!PageNumber</Value>
+                      <MarkupType>HTML</MarkupType>
+                      <Style>
+                        <FontStyle>Italic</FontStyle>
+                        <FontFamily>Century Gothic</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <Format>0;(0)</Format>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value> of </Value>
+                      <Style>
+                        <FontStyle>Italic</FontStyle>
+                        <FontFamily>Century Gothic</FontFamily>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Label>totalNumber</Label>
+                      <Value>=Globals!TotalPages</Value>
+                      <MarkupType>HTML</MarkupType>
+                      <Style>
+                        <FontStyle>Italic</FontStyle>
+                        <FontFamily>Century Gothic</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <Format>0;(0)</Format>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Left>4.71535cm</Left>
+              <Height>0.78833cm</Height>
+              <Width>6.82974cm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageFooter>
+        <PageHeight>29.7cm</PageHeight>
+        <PageWidth>21cm</PageWidth>
+        <LeftMargin>1cm</LeftMargin>
+        <RightMargin>1cm</RightMargin>
+        <TopMargin>1cm</TopMargin>
+        <BottomMargin>1cm</BottomMargin>
+        <ColumnSpacing>0.13cm</ColumnSpacing>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="todayDate">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="staffName">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="month">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="year">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>todayDate</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>staffName</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>month</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>3</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>year</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <EmbeddedImages>
+    <EmbeddedImage Name="BookMasterLogo">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>f798ec99-a255-4024-81fd-3fd0723e5e2f</rd:ReportID>
+</Report>
